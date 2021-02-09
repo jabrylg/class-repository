@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"org.howard.edu.lsp.assignment2.combination","l":"Combination"},{"p":"org.howard.edu.lsp.assignment2.test","l":"Driver"}]
