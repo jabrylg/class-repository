@@ -25,7 +25,7 @@ public class Combination {
 		System.out.println("Target integer: " + k);
 		
 		ArrayList<Integer> set = new ArrayList<Integer>(); //this list stores one particular answer set
-		ArrayList<ArrayList<Integer>> result =  new ArrayList<ArrayList<Integer> >(); //this list stores all the answer sets
+		ArrayList<ArrayList<Integer>> result =  new ArrayList<ArrayList<Integer>>(); //this list stores all the answer sets
 		
 	    // Calculate the total number of bits 
 	    int range = (1 << a.length) - 1; 
