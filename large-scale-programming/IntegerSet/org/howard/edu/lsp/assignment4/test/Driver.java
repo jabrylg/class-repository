@@ -102,9 +102,12 @@ public class Driver {
 			System.out.println();
 			System.out.println("setA = " + setA.toString() + " Set length = " + setA.length());
 			System.out.println("setB = " + setB.toString() + " Set length = " + setB.length());
-			System.out.println("The union of setA and setB = " + setA.union(setB).toString());
-			System.out.println("The intersection of setA and setB = " + setA.intersect(setB).toString());
-			System.out.println("The difference of setA and setB = " + setA.diff(setB).toString());
+			System.out.print("The union of setA and setB = ");
+			setA.union(setB);
+			System.out.print("The intersection of setA and setB = ");
+			setA.intersect(setB);
+			System.out.print("The difference of setA and setB = ");
+			setA.diff(setB);
 			
 			System.out.println();
 			setA.clear();

@@ -146,9 +146,9 @@ public class IntegerSet {
 	} 
 
 	/**
-	* set union
+	* obtains and prints the union of a two sets
 	*/
-	public IntegerSet union(IntegerSet b) {
+	public void union(IntegerSet b) {
 		IntegerSet union = new IntegerSet();
 		union.set.addAll(this.set);
 		union.set.addAll(b.set);
@@ -163,19 +163,18 @@ public class IntegerSet {
 			hashSet.add(union.set.get(i));
 		}
 		
-		return union;
+		System.out.println(union.toString());
 	}
 
 	/**
-	* finds the intersection of two sets
-	* 
-	* @return the intersection
+	* obtains and prints the intersection of two sets
 	*/
-	public IntegerSet intersect(IntegerSet b) {
+	public void intersect(IntegerSet b) {
 		IntegerSet intersection = new IntegerSet();
 		
 		if (this.set == null || b.set == null || this.length() == 0 || b.length() == 0){ // if one set is empty there is no intersection
-	        return intersection;
+			System.out.println(intersection.toString());
+	        return;
 	    }
 		
 		HashSet<Integer> hashSet = new HashSet(); // will be used to check if an item is in setA (the set calling this method)
@@ -189,7 +188,7 @@ public class IntegerSet {
 				intersection.set.add(b.set.get(i));
 		}
 		
-		return intersection;
+		System.out.println(intersection.toString());
 	}
 
 	/**
@@ -197,16 +196,18 @@ public class IntegerSet {
 	* 
 	* @return the difference
 	*/
-	public IntegerSet diff(IntegerSet b) { // set difference, i.e. s1 - s2
+	public void diff(IntegerSet b) { // set difference, i.e. s1 - s2
 		IntegerSet difference = new IntegerSet();
 		
-		if (this.set == null || b.set == null){
-	        return difference;
+		if (this.set == null || this.length() == 0){ // if one of the sets is empty then the difference is the same as the other set
+			System.out.println(b.toString());
+			return;
+	    }
+		if (b.set == null || b.length() == 0){
+			System.out.println(this.toString());
+			return;
 	    }
 		
-		if (this.set == null || b.set == null){
-	        return difference;
-	    }
 		
 		
 		HashSet<Integer> hashSet = new HashSet();
@@ -231,6 +232,7 @@ public class IntegerSet {
 				difference.set.add(this.set.get(i));
 		}
 		
-		return difference;
+		
+		System.out.println(difference.toString());
 	}	// return String representation of your set
 }
