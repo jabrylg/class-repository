@@ -31,7 +31,7 @@ public class Driver {
 		System.out.println(setName + " = " + setA.toString());
 		
 		for(x = 0; x < stop; x++) {
-			random = rand.nextInt(60);
+			random = rand.nextInt(80);
 			if(random < 30 || setA.length() == 0) {
 				temp = rand.nextInt(10);
 				setA.add(temp);
@@ -54,6 +54,8 @@ public class Driver {
 					System.out.println("The largest int in " + setName + " " + setA.largest());
 				}else if(random < 80) {
 					System.out.println("The smallest int in " + setName + " " + setA.smallest());
+				}else if(random < 85) {
+					System.out.println("Is the set " + setName + " empty (T/F)?" + setA.smallest());
 				}
 			}
 			System.out.println(setName + " = " + setA.toString() + " Set length = " + setA.length());
