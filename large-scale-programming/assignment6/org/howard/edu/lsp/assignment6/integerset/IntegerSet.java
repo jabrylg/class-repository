@@ -1,4 +1,4 @@
-package org.howard.edu.lsp.assignment4.implementation;
+package org.howard.edu.lsp.assignment6.integerset;
 
 /*
 Name: Jabryl Guy
@@ -77,8 +77,8 @@ public class IntegerSet {
 	    }
 
 	    //to avoid messing the order of the lists we will use a copy
-	    ArrayList one = new ArrayList<Integer>(this.set); 
-	    ArrayList two = new ArrayList<Integer>(b.set);   
+	    ArrayList<Integer> one = new ArrayList<Integer>(this.set); 
+	    ArrayList<Integer> two = new ArrayList<Integer>(b.set);   
 
 	    Collections.sort(one); // sort the sets for easier comparison
 	    Collections.sort(two);      
@@ -211,7 +211,7 @@ public class IntegerSet {
 		
 		
 		
-		HashSet<Integer> hashSet = new HashSet();
+		HashSet<Integer> hashSet = new HashSet<Integer>();
 		
 		for(int i = 0; i < this.set.size(); i++) {
 			hashSet.add(this.set.get(i));
@@ -222,7 +222,7 @@ public class IntegerSet {
 				difference.set.add(b.set.get(i));
 		}
 		
-		HashSet<Integer> hashSet2 = new HashSet();
+		HashSet<Integer> hashSet2 = new HashSet<Integer>();
 		
 		for(int i = 0; i < b.set.size(); i++) {
 			hashSet2.add(b.set.get(i));

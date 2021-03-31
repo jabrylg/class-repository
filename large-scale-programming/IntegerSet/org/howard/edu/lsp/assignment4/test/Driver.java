@@ -3,8 +3,8 @@ package org.howard.edu.lsp.assignment4.test;
 import java.util.ArrayList;
 import java.util.Random;
 
-import org.howard.edu.lsp.assignment4.implementation.IntegerSet; //allows integerset class to be used
-import org.howard.edu.lsp.assignment4.implementation.IntegerSetException;
+import integerset.IntegerSet;
+import integerset.IntegerSetException;
 
 /*
 Name: Jabryl Guy
@@ -119,6 +119,7 @@ public class Driver {
 			System.out.println("SetB cleared");
 			System.out.println("setB = " + setB.toString() + " Set length = " + setB.length());
 			System.out.println();
+			setB.largest();
 		}
     }
 }

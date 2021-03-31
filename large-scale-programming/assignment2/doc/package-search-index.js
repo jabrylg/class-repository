@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"org.howard.edu.lsp.assignment2.combination"},{"l":"org.howard.edu.lsp.assignment2.test"}]
