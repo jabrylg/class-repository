@@ -209,19 +209,6 @@ public class IntegerSet {
 			return;
 	    }
 		
-		
-		
-		HashSet<Integer> hashSet = new HashSet<Integer>();
-		
-		for(int i = 0; i < this.set.size(); i++) {
-			hashSet.add(this.set.get(i));
-		}
-		
-		for(int i = 0; i < b.set.size(); i++) {
-			if(!hashSet.contains(b.set.get(i))) // if set a (the set calling this method) does not contain this integer then add it to the intersection
-				difference.set.add(b.set.get(i));
-		}
-		
 		HashSet<Integer> hashSet2 = new HashSet<Integer>();
 		
 		for(int i = 0; i < b.set.size(); i++) {
@@ -233,7 +220,17 @@ public class IntegerSet {
 				difference.set.add(this.set.get(i));
 		}
 		
+		HashSet<Integer> hashSet = new HashSet<Integer>();
 		
+		for(int i = 0; i < this.set.size(); i++) {
+			hashSet.add(this.set.get(i));
+		}
+		
+		for(int i = 0; i < b.set.size(); i++) {
+			if(!hashSet.contains(b.set.get(i))) // if set a (the set calling this method) does not contain this integer then add it to the intersection
+				difference.set.add(b.set.get(i));
+		}
+			
 		System.out.println(difference.toString());
 	}	// return String representation of your set
 }

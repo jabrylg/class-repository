@@ -3,8 +3,10 @@ package org.howard.edu.lsp.assignment4.test;
 import java.util.ArrayList;
 import java.util.Random;
 
-import integerset.IntegerSet;
-import integerset.IntegerSetException;
+import org.howard.edu.lsp.assignment4.implementation.IntegerSet;
+import org.howard.edu.lsp.assignment4.implementation.IntegerSetException;
+
+
 
 /*
 Name: Jabryl Guy
