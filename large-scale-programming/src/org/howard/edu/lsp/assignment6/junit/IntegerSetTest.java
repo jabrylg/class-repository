@@ -136,6 +136,16 @@ public class IntegerSetTest{
    @Test
    @DisplayName(".largest Test")
    public void largestTest() {
+	   boolean exception = false;
+
+	   try {
+		   setA.largest();
+	   } catch (IntegerSetException e) {
+		   exception = true;
+	   }
+	   
+	   assertTrue(exception);
+	   
 	   setA.add(10);
 	   try {
 		   assertEquals(setA.largest(), 10);
@@ -154,11 +164,22 @@ public class IntegerSetTest{
 	   } catch (IntegerSetException e) {
 		e.printStackTrace();
 	   }
+	   
    }
 
    @Test
    @DisplayName(".smallest Test")
    public void smallestTest() {
+	   boolean exception = false;
+
+	   try {
+		   setA.largest();
+	   } catch (IntegerSetException e) {
+		   exception = true;
+	   }
+	   
+	   assertTrue(exception);
+	   
 	   setA.add(10);
 	   try {
 		   assertEquals(setA.smallest(), 10);
